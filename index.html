@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for a city..." 
+                    autocomplete="off"
+                >
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Current Weather Section -->
+            <section class="current-weather" id="currentWeather">
+                <div class="weather-header">
+                    <h2 id="cityName">Loading...</h2>
+                    <p id="dateTime"></p>
+                </div>
+                <div class="weather-main">
+                    <div class="weather-icon">
+                        <img id="weatherIcon" src="" alt="Weather icon">
+                    </div>
+                    <div class="weather-details">
+                        <div class="temperature">
+                            <span id="temperature">--</span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <p id="weatherDescription">--</p>
+                    </div>
+                </div>
+                <div class="weather-info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-tint"></i>
+                        <span class="label">Humidity</span>
+                        <span id="humidity" class="value">--</span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-wind"></i>
+                        <span class="label">Wind Speed</span>
+                        <span id="windSpeed" class="value">--</span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-eye"></i>
+                        <span class="label">Visibility</span>
+                        <span id="visibility" class="value">--</span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-compress"></i>
+                        <span class="label">Pressure</span>
+                        <span id="pressure" class="value">--</span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-gauge"></i>
+                        <span class="label">Feels Like</span>
+                        <span id="feelsLike" class="value">--</span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-arrow-up"></i>
+                        <span class="label">Max Temp</span>
+                        <span id="maxTemp" class="value">--</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast Section -->
+            <section class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecastGrid">
+                    <!-- Forecast cards will be populated here -->
+                </div>
+            </section>
+
+            <!-- Search History -->
+            <section class="history-section">
+                <h3>Recent Searches</h3>
+                <div class="history-list" id="historyList">
+                    <!-- Recent searches will appear here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Weather data provided by OpenWeatherMap API</p>
+            <p>&copy; 2024 Weather Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
